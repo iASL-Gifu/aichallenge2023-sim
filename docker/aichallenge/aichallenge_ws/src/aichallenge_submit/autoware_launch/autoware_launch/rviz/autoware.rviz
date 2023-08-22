@@ -6,6 +6,9 @@ Panels:
       Expanded:
         - /Sensing1/LiDAR1/ConcatenatePointCloud1/Autocompute Value Bounds1
         - /Behavior_Path1/Status1
+        - /Motion Traj1
+        - /Motion Traj1/Status1
+        - /Motion Traj1/Topic1
       Splitter Ratio: 0.557669460773468
     Tree Height: 183
   - Class: rviz_common/Selection
@@ -945,11 +948,7 @@ Visualization Manager:
               Enabled: true
               Name: RouteArea
               Namespaces:
-                goal_lanelets: true
-                lane_start_bound: false
-                left_lane_bound: false
-                right_lane_bound: false
-                route_lanelets: true
+                {}
               Topic:
                 Depth: 5
                 Durability Policy: Transient Local
@@ -1352,8 +1351,7 @@ Visualization Manager:
                       Enabled: true
                       Name: Bound
                       Namespaces:
-                        left_bound: true
-                        right_bound: true
+                        {}
                       Topic:
                         Depth: 5
                         Durability Policy: Volatile
@@ -1792,8 +1790,7 @@ Visualization Manager:
                           Enabled: true
                           Name: VirtualWall (ObstacleStop)
                           Namespaces:
-                            stop_factor_text: true
-                            stop_virtual_wall: true
+                            {}
                           Topic:
                             Depth: 5
                             Durability Policy: Volatile
@@ -2055,7 +2052,7 @@ Visualization Manager:
               Value: true
           Enabled: false
           Name: Diagnostic
-      Enabled: true
+      Enabled: false
       Name: Planning
     - Class: rviz_common/Group
       Displays:
@@ -2143,6 +2140,47 @@ Visualization Manager:
         Color: 0; 148; 205
         Value: true
         Width: 0.30000001192092896
+      View Footprint:
+        Alpha: 1
+        Color: 230; 230; 50
+        Offset from BaseLink: 0
+        Rear Overhang: 1.0299999713897705
+        Value: false
+        Vehicle Length: 4.769999980926514
+        Vehicle Width: 1.8300000429153442
+      View Path:
+        Alpha: 1
+        Color: 0; 0; 0
+        Constant Color: false
+        Value: true
+        Width: 2
+      View Point:
+        Alpha: 1
+        Color: 0; 60; 255
+        Offset: 0
+        Radius: 0.10000000149011612
+        Value: false
+      View Text Velocity:
+        Scale: 0.30000001192092896
+        Value: false
+      View Velocity:
+        Alpha: 1
+        Color: 0; 0; 0
+        Constant Color: false
+        Scale: 0.30000001192092896
+        Value: true
+    - Class: rviz_plugins/Trajectory
+      Color Border Vel Max: 3
+      Enabled: false
+      Name: Motion Traj
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /planning/scenario_planning/lane_driving/motion_planning/obstacle_velocity_limiter/trajectory
+      Value: false
       View Footprint:
         Alpha: 1
         Color: 230; 230; 50
@@ -2272,7 +2310,7 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Scale: 16.154529571533203
+      Scale: 14.215986251831055
       Target Frame: viewer
       Value: TopDownOrtho (rviz_default_plugins)
       X: 38.426212310791016
