@@ -30,8 +30,8 @@
         truck: true
         bus: true
         trailer: true
-        unknown: false
-        bicycle: false
+        unknown: true
+        bicycle: true
         motorcycle: false
         pedestrian: false
 
@@ -51,7 +51,7 @@
         object_check_shiftable_ratio: 0.6               # [-]
         object_check_min_road_shoulder_width: 0.5       # [m]
         # lost object compensation
-        object_last_seen_threshold: 2.0
+        object_last_seen_threshold: 0.0
 
       # For safety check
       safety_check:
