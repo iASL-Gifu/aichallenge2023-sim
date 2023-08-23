@@ -739,6 +739,7 @@ Visualization Manager:
                     Color: 119; 11; 32
                   Name: DetectedObjects
                   Namespaces:
+
                     label: true
                     shape: true
                     twist: true
@@ -793,7 +794,14 @@ Visualization Manager:
                     Color: 119; 11; 32
                   Name: TrackedObjects
                   Namespaces:
-                    {}
+
+                    acceleration: true
+                    label: true
+                    position covariance: true
+                    shape: true
+                    twist: true
+                    uuid: true
+                    velocity: true
                   PEDESTRIAN:
                     Alpha: 0.9990000128746033
                     Color: 255; 192; 203
@@ -815,6 +823,7 @@ Visualization Manager:
                     Color: 255; 255; 255
                   Value: true
                   Visualization Type: Normal
+
               Enabled: false
               Name: Tracking
             - Class: rviz_common/Group
@@ -2137,6 +2146,7 @@ Visualization Manager:
       Name: Control
     - Class: rviz_plugins/Path
       Color Border Vel Max: 3
+
       Enabled: false
       Name: Behavior_Path
       Topic:
