@@ -25,6 +25,8 @@
   <exec_depend>tier4_system_launch</exec_depend>
   <exec_depend>tier4_vehicle_launch</exec_depend>
 
+  <exec_depend>static_centerline_optimizer</exec_depend>
+
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>autoware_lint_common</test_depend>
 
